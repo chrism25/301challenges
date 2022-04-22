@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#script: syslog.date
+#purpose: copy syslog to a file with date of creation
+#Example of usage: Determine what or when something went wrong
+#Expected output: Creation of a file with events happening in the system dated
+#Variable: sec, min, hr, day, month, year
+
+sec="$date +%S"
+min="$date +%M"
+hr="$date +%H"
+day="$date +%d"
+month="$date +%m"
+year="$date +%Y"
+
+echo "Current System log as $hr:$min:$sec of $month/$day/$year"
+cp /var/log/syslog /home/vmubuntu/gits/301challenges/syslog.txt
+#copies the system log to the pwd
+echo "$hr:$min:$sec of $month/$day/$year" >> syslog.txt
+#appends the time to the file
