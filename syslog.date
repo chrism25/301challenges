@@ -6,15 +6,14 @@
 #Expected output: Creation of a file with events happening in the system dated
 #Variable: sec, min, hr, day, month, year
 
-sec="$date +%S"
-min="$date +%M"
-hr="$date +%H"
-day="$date +%d"
-month="$date +%m"
-year="$date +%Y"
+var=$(date)
 
-echo "Current System log as $hr:$min:$sec of $month/$day/$year"
+echo "A Current System log is being created as $var in syslog.txt"
 cp /var/log/syslog /home/vmubuntu/gits/301challenges/syslog.txt
 #copies the system log to the pwd
-echo "$hr:$min:$sec of $month/$day/$year" >> syslog.txt
+sleep 1s
+echo "$var" >> syslog.txt
 #appends the time to the file
+echo "A time stamp has been append $(date)"
+sleep 1s
+echo "The file is ready $(date)"
