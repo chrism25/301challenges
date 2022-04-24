@@ -9,11 +9,9 @@
 var=$(date)
 
 echo "A Current System log is being created as $var in syslog.txt"
-cp /var/log/syslog /home/vmubuntu/gits/301challenges/syslog.txt
-#copies the system log to the pwd
+cp /var/log/syslog /home/vmubuntu/gits/301challenges/syslog.txt"$var"
+#copies the system log to the pwd and adds the time stamp
 sleep 1s
-echo "$var" >> syslog.txt
-#appends the time to the file
-echo "A time stamp has been append $(date)"
+echo "A time stamp has been append $var"
 sleep 1s
 echo "The file is ready $(date)"
