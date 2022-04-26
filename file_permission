@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#script: file_permission
+#purpose: Change file permissions
+#Example of usage: Alter the permission of a file or directory
+#Expected output: Alteration and presentation of permissions
+#Variable: file, code
+
+read -a file -p "Please provide directory path for the file to be alter:"
+#asks user for the path to the file 
+read -a code -p "Input 3 digit chmod code to modify permissions:"
+#ask user for chmod code
+chmod -R $code $file
+#Uses input provided to modify permission 
+echo "These are the new persmissions assigned"
+ls -al $file
+#list permissions for the directory
