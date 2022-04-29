@@ -1,0 +1,45 @@
+#!/bin/bash
+
+#script: file_permission
+#purpose: Change file permissions
+#Example of usage: Alter the permission of a file or directory
+#Expected output: Alteration and presentation of permissions
+#Variable: file, code
+
+PS3="What would you like to do? "
+#prompt user a question
+choices=("Get greet" "Ping self" "IP info" "Exit")
+#provides user the array of options
+select x in "${choices[@]}"
+#asks user to choose an option
+do 
+case $x in
+#To evalute and execute statements
+"Get greet")
+echo "Hello World"
+echo ""
+;;
+"Ping self")
+echo "pinging loopback address"
+ping vmubuntu -c 3
+#pings loopback address 3 times
+echo ""
+;;
+"IP info")
+echo "Here is the network information"
+ifconfig
+#prints network information
+echo ""
+;;
+"Exit")
+echo "Quitting the Menu"
+break
+;;
+*)
+#in case an invalid choice is given
+echo "Invalid choice"
+echo ""
+;;
+esac
+#to close the case
+done
