@@ -1,0 +1,106 @@
+#!/bin/bash
+
+#script: menu
+#purpose: to present choices to the user
+#Example of usage: choose one or more functions among many
+#Expected output: Perform a choosen function
+#Variable: X
+
+conf="The file has been clear"
+
+cd /var/log
+#takes user to the log file
+
+Syslog () {
+echo "Current System log"
+echo ""
+cat syslog
+#Information about devices log
+>syslog
+#clears the file
+echo ""
+echo $conf
+echo ""
+}
+
+Wtmp () {
+echo "Current Kernel log"
+echo ""
+cat wtmp
+#shows information of user's logins and system
+>wtmp
+#clears the file
+echo ""
+echo $conf
+echo ""
+}
+
+Authen () {
+echo "Current Authentication Log"
+echo ""
+cat auth.log
+#shows all the authentication logs 
+echo ""
+shred -vfzu auth.log
+#permanently deletes file
+echo ""
+}
+
+Kernel () {
+echo "Current Kernel log"
+echo ""
+cat kern.log
+#shows information and events on the system
+>kern.log
+#clears the file
+echo ""
+echo $conf
+echo ""
+}
+
+PS3="what log would you like to get rid of? "
+#prompt user a question
+choices=("System" "Wtpm" "Authentication" "Kernel" "All of the above" "I'm done")
+#provides user the array of options
+select x in "${choices[@]}"
+#asks user to choose an option
+do 
+case $x in
+#To evalute and execute statements
+
+"System")
+Syslog
+;;
+
+"Wtpm")
+Wtmp
+;;
+
+"Authentication")
+Authen
+;;
+
+"Kernel")
+Kernel
+;;
+
+"All of the above")
+Syslog
+Wtmp
+Authen
+Kernel
+break
+;;
+
+"I'm done")
+break
+;;
+
+esac
+#to close the case
+done
+
+#-f, --force    change permissions to allow writing if necessary
+#-u             deallocate and remove file after overwriting
+#-v, --verbose  show progress
+#-z, --zero     add a final overwrite with zeros to hide shredding
