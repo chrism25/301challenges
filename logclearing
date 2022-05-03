@@ -1,10 +1,10 @@
 #!/bin/bash
 
-#script: menu
-#purpose: to present choices to the user
-#Example of usage: choose one or more functions among many
-#Expected output: Perform a choosen function
-#Variable: X
+#script: logclearing
+#purpose: Clean or delete logs
+#Example of usage: Get rid of logs, footprints
+#Expected output: clearing or destruction of logs
+#Variable: conf
 
 conf="The file has been clear"
 
