@@ -1,0 +1,26 @@
+#!/usr/bin/env python3
+
+#Script Name: bash_python
+#Purpose: Provides the user with the hardware configuration of the computer utilizing bash operators
+#Example usage: Utilize an already existing bash file on python
+#Expected output: A list of the computer's hardware configuration
+#variables: name, cpu, ram, disad, disad2, netad
+
+import os
+#gives access to the bash library
+
+print ("Name of the Computer:", "\n") 
+name = os.system ("sudo lshw | grep -m1 ''")
+#uses os.system library to grep the 1st line from the list hardware using bash commands
+print ("\n", "CPU:")
+cpu = os.system ("sudo lshw | grep -A 4 'Intel(R)'")
+#greps the "*" match and the next 4 lines from lshw
+print ("\n", "Ram:")
+ram = os.system  ("sudo lshw | grep -A 2 'System memory'")
+print ("\n", "Display Adapter:")
+disad = os.system ("sudo lshw | grep -A 4 'compatible'")
+disad2 = os.system ("sudo lshw | grep -B 4 'irq:18'")
+#greps the "*" match and the 4 lines before from lshw
+print ("\n", "Network Adapter:")
+netad = os.system ("sudo lshw | grep -B 14  'irq:19'")
+#greps the "*" match and the 14 lines before from lshw
