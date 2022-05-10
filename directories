@@ -8,19 +8,18 @@
 
 import os
 
-dir = input("Please provide directory path: "  )
-    #Sets user input into a variable   
-print ()
+dir = input("Provide directory path to analyze: ")
+#Sets user input into a variable   
 def directories(result):
     
     for (root, dirs, files) in os.walk(result):
         #Loops through input given to provide all the path branches, directories and files
+        print ("\n", "The directories and files for the following path are below")
         print(root)
-        print ("These are the directories, subdirectories and files in this path", "\n")
         # Prints all path branches
         print(dirs)
         # Prints all directories ans sub inside path
-        print(files, "\n")
+        print(files)
         # Prints all files inside path given
 
 directories(dir)
