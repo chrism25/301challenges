@@ -1,26 +1,27 @@
 #!/usr/bin/env python3
 
-#Script Name: bash_python
-#Purpose: Provides the user with the hardware configuration of the computer utilizing bash operators
-#Example usage: Utilize an already existing bash file on python
-#Expected output: A list of the computer's hardware configuration
-#variables: name, cpu, ram, disad, disad2, netad
+#Script Name: Directories
+#Purpose: To provide all elements inside directory.
+#Example usage: List of all elements inside specify target.
+#Expected output: List of directotries, subdirectories and files
+#variables: Direc
 
 import os
 
-def directories(path):
-    dir = input("Please provide directory path: "  )
+dir = input("Please provide directory path: "  )
+    #Sets user input into a variable   
+print ()
+def directories(result):
     
-for (root, dirs, files) in os.walk(path):
-    ### Add a print command here to print ==root==
-    print(root)
-    ### Add a print command here to print ==dirs==
-    print(dirs)
-    ### Add a print command here to print ==files==
-    print(files)
+    for (root, dirs, files) in os.walk(result):
+        #Loops through input given to provide all the path branches, directories and files
+        print(root)
+        print ("These are the directories, subdirectories and files in this path", "\n")
+        # Prints all path branches
+        print(dirs)
+        # Prints all directories ans sub inside path
+        print(files, "\n")
+        # Prints all files inside path given
 
-# Main
-
-### Pass the variable into the function here
-
-directories(path)
+directories(dir)
+#calls the function with the set parameter provided
