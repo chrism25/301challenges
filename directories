@@ -1,0 +1,26 @@
+#!/usr/bin/env python3
+
+#Script Name: bash_python
+#Purpose: Provides the user with the hardware configuration of the computer utilizing bash operators
+#Example usage: Utilize an already existing bash file on python
+#Expected output: A list of the computer's hardware configuration
+#variables: name, cpu, ram, disad, disad2, netad
+
+import os
+
+def directories(path):
+    dir = input("Please provide directory path: "  )
+    
+for (root, dirs, files) in os.walk(path):
+    ### Add a print command here to print ==root==
+    print(root)
+    ### Add a print command here to print ==dirs==
+    print(dirs)
+    ### Add a print command here to print ==files==
+    print(files)
+
+# Main
+
+### Pass the variable into the function here
+
+directories(path)
