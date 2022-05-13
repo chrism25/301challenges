@@ -1,0 +1,3 @@
+New-ADOrganizationalUnit -Name "TPS" -ProtectedFromAccidentalDeletion $false
+New-ADGroup -GroupScope "DomainLocal" -Name "Test"
+New-ADUser -name "Franz Ferdinand" -GivenName "Franz" -Surname "Ferdinand" -SamAccountName "F. Ferdinand" -EmailAddress "ferdi@globexpower.com" -company "Globex" -title "TPS Reporting Lead" -state "Oregon" -city "Springfield" -country "USA" -Department "TPS Department" -AccountPassword (Read-Host -assecurestring "Input User Password") -enabled $true
