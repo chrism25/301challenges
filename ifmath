@@ -1,0 +1,45 @@
+#!/usr/bin/env python3
+
+#Script Name: Directories
+#Purpose: To provide all elements inside directory.
+#Example usage: List of all elements inside specify target.
+#Expected output: List of directotries, subdirectories and files
+#variables: Direc
+
+from pickle import TRUE
+
+print ("We are going to have fun with numbers, give me 2:")
+
+while TRUE:
+    try:
+    #opens try-except stament to replace output    
+        x = int(input())
+        y = int(input())
+        #list is set to only integers and splits the input
+        break
+        #breaks loop
+    except ValueError:
+        print("I said fun! don't make it too dificult, give them to me again")
+        #replaces error message with prompt
+        
+def equal (x, y):
+    if x == y:
+        print ("These are the same numbers, no fair!")
+    elif x != y: 
+        print ("These are great numbers, let us compare them")
+equal (x, y)
+
+def operations (x, y):
+    if x < y:
+        print (x, "is less than", y)
+    elif x > y:
+        print (x, "is greater than", y)
+    elif x <= 0:
+        print (x, "Well at least is less than or equal to 0")
+    elif x >= 0:
+        print (x, "Well at least is greater than or equal to 0")
+    elif y <= 0:
+        print (y, "Well at least is less than or equal to 0")
+    else: 
+        print (y, "Well at least is greater than or equal to 0")        
+operations (x, y)
