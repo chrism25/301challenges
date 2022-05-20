@@ -1,0 +1,35 @@
+#!/usr/bin/env python3
+
+#Script Name: List
+#Purpose: Make a list of elements, test commands on it
+#Example usage: List elements and alter its content
+#Expected output: List of elements
+#variables: primenumbers, x
+
+primenumbers = ["2", "3", "5", "7", "11", "13", "17", "19", "23", "29"]
+#list set to a variable
+print ("This is the 4th prime number:")
+print(primenumbers[3],  "\n")
+#prints 4 element on list
+print ("Here are the 6th through 10th first prime numbers:")
+print(primenumbers[5:10], "\n")
+#prints the 6th thorugh 10th elements(end limit is excluded, that's why is 10 instead of 9)
+print ("I don't like the number 17, so I would bring and onion instead")
+primenumbers.pop(6)
+#discard the 7th element
+primenumbers.append("onion")
+#adds element to list
+print (primenumbers, "\n")
+
+x = primenumbers.copy() 
+#copies variable
+x.reverse()
+#reverse the list and place it on a variable
+print ("List seems lonely, lets bring his brother, he is alike but the opposite")
+print (x, "\n")
+primenumbers.remove("onion")
+#removes an element from the list
+x.remove("onion")
+print ("List look odd, let us leave it with just numbers")
+print(primenumbers)
+print(x)
