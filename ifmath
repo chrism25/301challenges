@@ -35,11 +35,11 @@ def operations (x, y):
     elif x > y:
         print (x, "is greater than", y)
     elif x <= 0:
-        print (x, "Well at least is less than or equal to 0")
+        print ("Well at least they are less than or equal to 0")
     elif x >= 0:
-        print (x, "Well at least is greater than or equal to 0")
+        print ("Well at least they are greater than or equal to 0")
     elif y <= 0:
-        print (y, "Well at least is less than or equal to 0")
+        print ("Well at least they are less than or equal to 0")
     else: 
-        print (y, "Well at least is greater than or equal to 0")        
+        print ("Well at least they are greater than or equal to 0")        
 operations (x, y)
