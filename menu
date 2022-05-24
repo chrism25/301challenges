@@ -21,7 +21,7 @@ echo ""
 ;;
 "Ping self")
 echo "pinging loopback address"
-ping vmubuntu -c 3
+ping 127.0.0.1 -c 3
 #pings loopback address 3 times
 echo ""
 ;;
