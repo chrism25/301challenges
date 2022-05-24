@@ -1,10 +1,10 @@
 #!/bin/bash
 
-#script: file_permission
-#purpose: Change file permissions
-#Example of usage: Alter the permission of a file or directory
-#Expected output: Alteration and presentation of permissions
-#Variable: file, code
+#script: Menu
+#purpose: Present a menu with options
+#Example of usage: Give the user the option to execute 1 or more tasks
+#Expected output: Diverse functions
+#Variable: PS3, choices
 
 PS3="What would you like to do? "
 #prompt user a question
