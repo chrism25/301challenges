@@ -1,0 +1,48 @@
+#!/usr/bin/env python3
+
+#Script Name: Psutil
+#Purpose: To get information about the PC resiurces
+#Example usage: get information about the times
+#Expected output: list of times that the pc uses
+#variables: record
+
+import psutil
+
+def info():
+    record = psutil.cpu_times()
+    #CPU times as a tuple separated by atributes
+    print("Here is a list of the time consumption of resources:\n")
+
+    print("In user mode, normal processes spent in seconds is:")
+    print(record[0])
+    #Provides time of normal processes executing in user mode
+    print("\nIn kernel mode, processes spent:")
+    print(record[2])
+    #Time executing in kernel mode
+    print("\nSystem was idle for")
+    print(record[3])
+    #Time the system was idle
+    print("\nIn user mode priority processes required:")
+    print(record[1])
+    #Time of priority processes executing in user mode
+    print("\nI/O time spent to complete:")
+    print(record[5])
+    #Time waiting for I/O to complete(not in idle) 
+    print("\nTime servicing hardware interrupts:")
+    print(record[6])
+    #Time servicing hardware interrupts
+    print("\nTime servicing software interrupts:")
+    print(record[7])
+
+    print("\nOther operating systems in a virtualized environment spent:")
+    print(record[8])
+
+    print("\nVirtual CPU for guest operating systems under Linux kernel spent:")
+    print(record[9])
+
+info ()
+
+x = info()
+file = open("times.txt","a") 
+file.write(x) 
+file.close() 
