@@ -42,7 +42,7 @@ def info():
 
 info ()
 
-x = info()
-file = open("times.txt","a") 
-file.write(x) 
-file.close() 
+# x = info()
+# file = open("times.txt","a") 
+# file.write(x) 
+# file.close() 
