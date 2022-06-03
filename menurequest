@@ -1,0 +1,55 @@
+# #!/usr/bin/env python3
+
+# #Script Name: Psutil
+# #Purpose: To get information about the PC resiurces
+# #Example usage: get information about the times
+# #Expected output: list of times that the pc uses
+# #variables: record
+# #test:https://api.github.com
+
+import requests
+
+# url = input("Please provide website to analyze: ")
+# print()
+# response = requests.get(url)
+
+# def menu():
+#     print("1) GET")
+#     print("2) POST")
+#     print("3) PUT")
+#     print("4) DELETE")
+#     print("5) HEAD")
+#     print("6) PATCH")
+#     print("7) OPTIONS")
+#     print("8) EXIT")
+
+# print("Which method would you like to apply? \n")
+# menu()
+# choice = int(input())
+# print()
+
+# while choice !=8:
+#     if choice == 1:
+#         #print ("Are you sure you want to execute the command 'response.status_code'?")
+#         print (response.status_code)
+#     elif choice ==2:
+#         print (requests.post(url, data={'key':'value'}))
+#     elif choice ==3:
+#         print (requests.put(url, data={'key':'value'}))
+#     elif choice ==4:
+#         print (requests.delete(url))
+#     elif choice ==5:
+#         print (requests.head(url))
+#     elif choice ==6:
+#         print (requests.patch(url, data={'key':'value'}))
+#     elif choice ==7:
+#         print (requests.options(url))
+#     else:
+#         print ("Please choose from the Menu options")
+    
+#     print()
+#     menu()
+#     choice = int(input("Something else?: "))
+#     print()   
+
+requests.get(api.github.com).status_code
