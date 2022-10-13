@@ -9,7 +9,7 @@
 
 import requests
 
-url2 = "http://192.168.18.74:81"
+url2 = "Please provide*"
 #http for webserver
 url = input("Please provide website to analyze: ")
 #ask user for url
